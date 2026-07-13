@@ -5,7 +5,7 @@ def connect():
 
 def create_table():
     connection = connect()
-    cursor = connection.cursor
+    cursor = connection.cursor()
 
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS notes (
@@ -17,5 +17,28 @@ def create_table():
     """
     )
 
-    connection.commit
-    connection.close
+    connection.commit()
+    connection.close()
+
+def add_note(title, content, created_at):
+    connection = connect()
+    cursor = connection.cursor()
+
+    cursor.execute("""
+        INSERT INTO notes (title, content, created_at)
+        VALUES (?, ?, ?)
+    """, (title, content, created_at))
+
+    connection.commit()
+    connection.close()
+
+def get_notes():
+    connection = connect()
+    cursor = connection.cursor()
+
+    cursor.execute("SELECT id, title, created_at FROM notes")
+    notes = cursor.fetchall()
+
+    connection.close()
+
+    return notes
