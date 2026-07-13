@@ -1,7 +1,7 @@
 !DEVLOG!
 
 DAY 1 OF PROGRESS (13.07.2026)
-Session 1 (~40mins):
+Session 1 (~30mins):
 - Created multi-file structure
 - Added SQLite connection and table creation
 - Learned a little SQL Theory regarding how does connection, parsing and cursor work
