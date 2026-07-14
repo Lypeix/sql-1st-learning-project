@@ -5,11 +5,11 @@ The goal of this project is to learn SQL fundamentals and replace JSON.
 
 ## Roadmap
 
-- [ ] Create multi-file project structure
-- [ ] Add SQLite database connection
-- [ ] Create `notes` table
-- [ ] Add function to insert notes into database
-- [ ] Add function to list saved notes
+- [x] Create multi-file project structure
+- [x] Add SQLite database connection
+- [x] Create `notes` table
+- [x] Add function to insert notes into database
+- [x] Add function to list saved notes
 - [ ] Add function to view single note details
 - [ ] Add function to delete notes
 - [ ] Add function to search notes by title/content
