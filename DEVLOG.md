@@ -6,8 +6,7 @@ Session 1 (~45mins):
 - Added create_table()
 - Added add_note()
 - Added get_notes()
-- Learned a little SQL Theory regarding how does connection, parsing and cursor work
-- Learned a little about how Python and SQL interact
+- Studied theory regarding how does connection, parsing and cursor work
 
 DAY 2 OF PROGRESS (14.07.2026):
 Session 1 (~45mins):
