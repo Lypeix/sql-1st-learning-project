@@ -10,7 +10,7 @@ The goal of this project is to learn SQL fundamentals and replace JSON.
 - [x] Create `notes` table
 - [x] Add function to insert notes into database
 - [x] Add function to list saved notes
-- [ ] Add function to view single note details
+- [x] Add function to view single note details
 - [ ] Add function to delete notes
 - [ ] Add function to search notes by title/content
 - [ ] Add user input menu
