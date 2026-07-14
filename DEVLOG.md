@@ -13,4 +13,4 @@ DAY 2 OF PROGRESS (14.07.2026):
 Session 1 (~45mins):
 - Added get_notes_by_id to database.py
 - Added usage to main.py
-- Reconstructed connect(), create_table(), add_note() and get_notes() from memory after understanding 
+- Reconstructed connect(), create_table(), add_note() and get_notes() from memory after understanding how they work
