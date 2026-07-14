@@ -42,3 +42,19 @@ def get_notes():
     connection.close()
 
     return notes
+
+def get_notes_by_id(note_id):
+    connection = connect()
+    cursor = connection.cursor()
+
+    cursor.execute("""
+        SELECT id, title, content, created_at
+        FROM notes
+        WHERE id = ?
+    """, (note_id,))
+
+    note = cursor.fetchone
+
+    connection.close()
+
+    return note
