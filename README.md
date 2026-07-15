@@ -11,9 +11,9 @@ The goal of this project is to learn SQL fundamentals and replace JSON.
 - [x] Add function to insert notes into database
 - [x] Add function to list saved notes
 - [x] Add function to view single note details
-- [ ] Add function to delete notes
+- [x] Add function to delete notes
 - [ ] Add function to search notes by title/content
-- [ ] Add user input menu
+- [x] Add user input menu
 - [ ] Add note creation from user input
 - [ ] Add input validation
 - [ ] Add timestamps for notes
