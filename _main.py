@@ -1,4 +1,4 @@
-from database import create_table, add_note, get_notes, get_notes_by_id, delete_note
+from database import create_table, add_note, get_notes, get_notes_by_id, delete_note, search_notes
 
 
 def show_notes():
@@ -41,6 +41,24 @@ def delete_note_by_input():
     print(f"{note_id} has been successfuly deleted!")
     delete_note(note_id)
 
+def search_notes_by_input():
+    search_text = input("Search notes by title/content\n> ").strip()
+
+    if not search_text:
+        print("Search cannot be empty")
+        return
+    
+    notes = search_notes(search_text)
+
+    if len(notes) == 0:
+        print("Note has not been found")
+        return
+    
+    else:
+        for note in notes:
+            print(f"{note[0]} - {note[1]} - {note[2]}")
+
+
 def main():
     create_table()
 
@@ -50,7 +68,8 @@ def main():
                     "\n2. View note details"
                     "\n3. Add notes"
                     "\n4. Delete notes"
-                    "\n5. Exit"
+                    "\n5. Search notes"
+                    "\n6. Exit"
                     "\n> "
                     )
         
@@ -67,6 +86,9 @@ def main():
             delete_note_by_input()
 
         elif choice == "5":
+            search_notes_by_input()
+
+        elif choice == "6":
             break
 
         else:
