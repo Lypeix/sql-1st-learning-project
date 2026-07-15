@@ -1,4 +1,4 @@
-from database import create_table, add_note, get_notes, get_notes_by_id, delete_note, search_notes
+from database import create_table, add_note, get_notes, get_notes_by_id, delete_note, search_notes, update_notes
 
 
 def show_notes():
@@ -52,6 +52,32 @@ def add_note_by_input():
     add_note(title, content, created_at)
     print("Note has been added")
 
+
+def update_note_by_input():
+    show_notes()
+
+    try:
+        note_id = int(input("Choose Note ID to update\n> "))
+    except ValueError:
+        print("Invalid ID")
+        return
+    
+    note = get_notes_by_id(note_id)
+
+    if note is None:
+        print("No matching note found")
+        return
+
+    new_title = input("New title\n> ")
+    new_content = input("New content\n> ")
+
+    if not new_title or not new_content:
+        print("New title and content cannot be empty")
+        return
+
+    update_notes(note_id, new_title, new_content)
+    print("Note updated!")
+
 def delete_note_by_input():
     show_notes()
 
@@ -91,9 +117,10 @@ def main():
                     "\n1. View notes"
                     "\n2. View note details"
                     "\n3. Add notes"
-                    "\n4. Delete notes"
-                    "\n5. Search notes"
-                    "\n6. Exit"
+                    "\n4. Update notes"
+                    "\n5. Delete notes"
+                    "\n6. Search notes"
+                    "\n7. Exit"
                     "\n> "
                     )
         
@@ -107,12 +134,15 @@ def main():
             add_note_by_input()
 
         elif choice == "4":
-            delete_note_by_input()
+            update_note_by_input()
 
         elif choice == "5":
-            search_notes_by_input()
+            delete_note_by_input()
 
         elif choice == "6":
+            search_notes_by_input()
+
+        elif choice == "7":
             break
 
         else:
