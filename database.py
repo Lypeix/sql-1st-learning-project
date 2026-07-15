@@ -58,3 +58,16 @@ def get_notes_by_id(note_id):
     connection.close()
 
     return note
+
+def delete_note(note_id):
+    connection = connect()
+    cursor = connection.cursor()
+
+    cursor.execute(""" 
+    DELETE FROM notes
+    WHERE id = ?
+    """, (note_id,))
+
+    connection.commit()
+    connection.close()
+    
