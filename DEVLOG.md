@@ -22,3 +22,6 @@ Session 1 (~60mins):
 - Fixed naming collision in delete_note() menu
 - Added search_notes() to database.py
 - Added search_notes input option to main.py
+
+Session 2 (~15mins):
+- Added add_note() to main.py
