@@ -53,7 +53,7 @@ def get_notes_by_id(note_id):
         WHERE id = ?
     """, (note_id,))
 
-    note = cursor.fetchone
+    note = cursor.fetchone()
 
     connection.close()
 
