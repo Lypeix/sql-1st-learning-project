@@ -3,6 +3,7 @@ import sqlite3
 def connect():
     return sqlite3.connect("notes.db")
 
+
 def create_table():
     connection = connect() # opens db
     cursor = connection.cursor() # creates object that sends commands to sql
@@ -18,6 +19,7 @@ def create_table():
 
     connection.commit() # saves changes
     connection.close()
+
 
 def add_note(title, content, created_at): # adds these 3 values from create_table to notes.db
     connection = connect()
@@ -43,6 +45,7 @@ def get_notes():
 
     return notes
 
+
 def get_notes_by_id(note_id):
     connection = connect()
     cursor = connection.cursor()
@@ -59,6 +62,7 @@ def get_notes_by_id(note_id):
 
     return note
 
+
 def delete_note(note_id):
     connection = connect()
     cursor = connection.cursor()
@@ -70,6 +74,7 @@ def delete_note(note_id):
 
     connection.commit()
     connection.close()
+
 
 def search_notes(search_text):
     connection = connect()
@@ -86,3 +91,18 @@ def search_notes(search_text):
     connection.close()
 
     return notes
+
+
+def update_notes(note_id, new_title, new_content):
+    connection = connect()
+    cursor = connection.cursor()
+
+    cursor.execute("""
+        UPDATE notes
+        SET title = ?, content = ?
+        WHERE id = ?
+        """, (note_id, new_title, new_content))
+    
+    connection.commit()
+    connection.close()
+    
