@@ -18,3 +18,4 @@ DAY 3 OF PROGRESS (15.07.2026):
 Session 1 (~45mins):
 - Added delete_note to database.py
 - Added working input menu for main.py featuring: show_notes, view_note_details, delete_note_by_input and main
+- Added missing () to functions and fixed naming collision in delete_note menu
