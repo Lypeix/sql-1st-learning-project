@@ -17,7 +17,7 @@ The goal of this project is to learn SQL fundamentals and replace JSON.
 - [x] Add function to search notes by title/content
 - [x] Add user input menu
 - [x] Add note creation from user input
-- [ ] Add update/edit note feature
+- [x] Add update/edit note feature
 - [ ] Add input validation
 - [ ] Add timestamps for notes
 - [ ] Add basic pytest tests
