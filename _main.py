@@ -11,6 +11,7 @@ def show_notes():
     for note in notes:
         print(f"{note[0]} - {note[1]} - {note[2]}")
 
+
 def view_note_details():
     show_notes()
     try:
@@ -29,6 +30,28 @@ def view_note_details():
         print(f"Content: {note[2]}")
         print(f"Created at: {note[3]}")   
 
+def add_note_by_input():
+    title = input("Title: ").strip()
+
+    if not title:
+        print("Title cannot be empty")
+        return
+    
+    content = input("Content: ").strip()
+
+    if not content:
+        print("Content cannot be empty")
+        return
+    
+    created_at = input("Created at: ")
+
+    if not created_at:
+        print("Date cannot be empty")
+        return
+    
+    add_note(title, content, created_at)
+    print("Note has been added")
+
 def delete_note_by_input():
     show_notes()
 
@@ -40,6 +63,7 @@ def delete_note_by_input():
     
     print(f"{note_id} has been successfuly deleted!")
     delete_note(note_id)
+
 
 def search_notes_by_input():
     search_text = input("Search notes by title/content\n> ").strip()
@@ -80,7 +104,7 @@ def main():
             view_note_details()
 
         elif choice == "3":
-            print("Coming soon!")
+            add_note_by_input()
 
         elif choice == "4":
             delete_note_by_input()
