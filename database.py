@@ -63,11 +63,26 @@ def delete_note(note_id):
     connection = connect()
     cursor = connection.cursor()
 
-    cursor.execute(""" 
+    cursor.execute("""
     DELETE FROM notes
     WHERE id = ?
     """, (note_id,))
 
     connection.commit()
     connection.close()
-    
+
+def search_notes(search_text):
+    connection = connect()
+    cursor = connection.cursor()
+
+    cursor.execute("""
+    SELECT id, title, created_at
+    FROM notes
+    WHERE title LIKE ? OR content LIKE ?
+    """, (f"%{search_text}%", f"%{search_text}%"))
+
+    notes = cursor.fetchall()
+
+    connection.close()
+
+    return notes
