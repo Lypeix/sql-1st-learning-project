@@ -26,5 +26,5 @@
 ### Session 2 (~45mins):
 - Added add_note() to main.py
 - Added more space between functions for superior readability
-- Added update_notes to database.py
-- Added update_notes_by_input to main.py
+- Added update_notes() to database.py
+- Added update_notes_by_input() to main.py
