@@ -16,10 +16,10 @@ The goal of this project is to learn SQL fundamentals and replace JSON.
 - [x] Add function to delete notes
 - [x] Add function to search notes by title/content
 - [x] Add user input menu
-- [ ] Add note creation from user input
+- [x] Add note creation from user input
+- [ ] Add update/edit note feature
 - [ ] Add input validation
 - [ ] Add timestamps for notes
-- [ ] Add update/edit note feature
 - [ ] Add basic pytest tests
 
 
