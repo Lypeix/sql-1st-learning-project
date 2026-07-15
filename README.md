@@ -5,6 +5,8 @@ The goal of this project is to learn SQL fundamentals and replace JSON.
 
 ## Roadmap
 
+- [x] Add README with setup and usage examples
+- [x] Add devlog documenting progress
 - [x] Create multi-file project structure
 - [x] Add SQLite database connection
 - [x] Create `notes` table
@@ -19,9 +21,6 @@ The goal of this project is to learn SQL fundamentals and replace JSON.
 - [ ] Add timestamps for notes
 - [ ] Add update/edit note feature
 - [ ] Add basic pytest tests
-- [ ] Add README with setup and usage examples
-- [ ] Add devlog documenting progress
-
 
 
 README.md      # Project documentation
