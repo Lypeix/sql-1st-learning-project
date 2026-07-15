@@ -8,7 +8,7 @@ def create_table():
     cursor = connection.cursor() # creates object that sends commands to sql
 
     cursor.execute("""
-    CREATE IF NOT EXISTS notes (
+    CREATE TABLE IF NOT EXISTS notes (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         title TEXT NOT NULL,
         content TEXT NOT NULL,
