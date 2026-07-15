@@ -29,7 +29,7 @@ def view_note_details():
         print(f"Content: {note[2]}")
         print(f"Created at: {note[3]}")   
 
-def delete_note():
+def delete_note_by_input():
     show_notes()
 
     try:
@@ -64,7 +64,7 @@ def main():
             print("Coming soon!")
 
         elif choice == "4":
-            delete_note()
+            delete_note_by_input()
 
         elif choice == "5":
             break
