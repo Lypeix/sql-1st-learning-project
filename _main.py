@@ -8,8 +8,8 @@ def show_notes():
         add_note("Pizza note", "That pizza from yesterday had too much cheese on it", "15-07-2026")
         notes = get_notes()
 
-    for note in notes:
-        print(f"{note[0]} - {note[1]} - {note[2]}")
+    for idx, note in enumerate(notes, start=1):
+        print(f"{idx}. {note[1]} - {note[2]}")
 
 
 def view_note_details():
@@ -44,7 +44,7 @@ def add_note_by_input():
         return
     
     created_at = get_timestamp()
-    
+
     add_note(title, content, created_at)
     print("Note has been added")
 
