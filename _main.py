@@ -1,5 +1,5 @@
 from database import create_table, add_note, get_notes, get_notes_by_id, delete_note, search_notes, update_notes
-from utils import get_text, get_int
+from utils import get_text, get_int, get_timestamp
 
 def show_notes():
     notes = get_notes()
@@ -43,11 +43,7 @@ def add_note_by_input():
         print("Content cannot be empty")
         return
     
-    created_at = get_text("Created at: ")
-
-    if not created_at:
-        print("Date cannot be empty")
-        return
+    created_at = get_timestamp()
     
     add_note(title, content, created_at)
     print("Note has been added")
