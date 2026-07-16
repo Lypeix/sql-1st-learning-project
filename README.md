@@ -21,7 +21,6 @@ The goal of this project is to learn SQL fundamentals and replace JSON with SQLi
 - [x] Add input validation
 - [x] Add timestamps for notes
 - [x] Add dynamic UX listing
-- [ ] Add basic pytest tests
 
 
 README.md      # Project documentation
