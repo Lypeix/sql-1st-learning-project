@@ -70,7 +70,7 @@ def delete_note(note_id):
     cursor.execute("""
     DELETE FROM notes
     WHERE id = ?
-    """, (note_id,))
+    """, (note_id,)) # the coma makes this a tuple despite just 1 element
 
     connection.commit()
     connection.close()
