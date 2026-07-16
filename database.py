@@ -102,7 +102,7 @@ def update_notes(note_id, new_title, new_content):
         UPDATE notes
         SET title = ?, content = ?
         WHERE id = ?
-        """, (new_title, new_content, note_id))
+        """, (new_title, new_content, note_id)) # parameter order must match the query string, not function's parameters
     
     connection.commit()
     connection.close()
