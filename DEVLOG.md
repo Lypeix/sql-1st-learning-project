@@ -50,6 +50,6 @@
   result: everything seems to be working, however I've read that it inserts values directly into the SQL query string, which risks SQL injection that changes the query (sql command in the multi-line string) that might have  problematic side-effects depending on input like 5 OR 1=1
 - Added comments explaining a few lines with my own wording
 
-### SESSION 2 (~15mins):
+### Session 2 (~15mins):
 - Added get_text() and get_int() helpers to utils.py
 - Replaced input() and int(input()) in _main.py with corresponding functions
