@@ -1,7 +1,7 @@
 # Notes Database CLI
 
 A command-line notes manager built with Python and SQLite.  
-The goal of this project is to learn SQL fundamentals and replace JSON.
+The goal of this project is to learn SQL fundamentals and replace JSON with SQLite.
 
 ## Roadmap
 
@@ -25,7 +25,7 @@ The goal of this project is to learn SQL fundamentals and replace JSON.
 
 
 README.md      # Project documentation
-DEVLOG.md      # Additional project documantation
+DEVLOG.md      # Additional project documentation
 main.py        # Main program loop and starter
 database.py    # SQLite connection and database queries
 utils.py       # Reusable helpers
