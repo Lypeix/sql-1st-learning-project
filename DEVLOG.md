@@ -28,3 +28,7 @@
 - Added more space between functions for superior readability
 - Added update_notes() to database.py
 - Added update_notes_by_input() to main.py
+
+## DAY 4 OF PROGRESS (15.07.2026):
+### Session 1 (~20mins): 
+- Remade update_notes(), delete_notes(), search_notes() from memory
