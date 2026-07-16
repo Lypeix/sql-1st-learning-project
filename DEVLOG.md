@@ -30,7 +30,21 @@
 - Added update_notes_by_input() to main.py
 
 ## DAY 4 OF PROGRESS (15.07.2026):
-### Session 1 (~30mins): 
+### Session 1 (~45mins): 
 - Remade update_notes(), delete_notes(), search_notes() from memory
 - Fixed the ordering of parameters in update_notes()
 - Studied SQL elements in the code 
+- Experimented by trying different ways to code, eg.
+      def delete_note(note_id):
+        connection = connect()
+        cursor = connection.cursor()
+    
+        cursor.execute(f"""
+        DELETE FROM notes
+        WHERE id = {note_id}
+        """) 
+    
+        connection.commit()
+        connection.close()
+  instead of placing note_id as tuple at the end of multi-line string
+  
