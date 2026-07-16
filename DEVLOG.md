@@ -29,8 +29,8 @@
 - Added update_notes() to database.py
 - Added update_notes_by_input() to main.py
 
-## DAY 4 OF PROGRESS (15.07.2026):
-### Session 1 (~45mins): 
+## DAY 4 OF PROGRESS (16.07.2026):
+### Session 1 (~50mins): 
 - Remade update_notes(), delete_notes(), search_notes() from memory
 - Fixed the ordering of parameters in update_notes()
 - Studied SQL elements in the code 
@@ -47,4 +47,4 @@
         connection.commit()
         connection.close()
   instead of placing note_id as tuple at the end of multi-line string
-  
+  result: everything seems to be working, however I've read that it inserts values directly into the SQL query string, which risks SQL injection that changes the query (sql command in the multi-line string) that might have  problematic side-effects depending on input like 5 OR 1=1
