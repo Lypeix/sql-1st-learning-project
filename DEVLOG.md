@@ -52,6 +52,6 @@
 
 ### Session 2 (~25mins):
 - Added get_text() and get_int() helpers to utils.py
-- Replaced input() and int(input()) in _main.py with corresponding functions
+- Replaced input() and int(input()) in main.py with corresponding functions
 - Added get_timestamp() to utils.py
-- Replaced manual date input in main.py add_note_by_input() with automatic date insertion handled by get_timestamp()
+- Replaced manual date input in add_note_by_input() with automatic timestamp generation
