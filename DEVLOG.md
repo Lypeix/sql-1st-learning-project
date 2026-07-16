@@ -48,3 +48,4 @@
         connection.close()
   instead of placing note_id as tuple at the end of multi-line string
   result: everything seems to be working, however I've read that it inserts values directly into the SQL query string, which risks SQL injection that changes the query (sql command in the multi-line string) that might have  problematic side-effects depending on input like 5 OR 1=1
+- Added comments explaining a few lines with my own wording
