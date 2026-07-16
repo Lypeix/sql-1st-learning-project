@@ -50,8 +50,12 @@
   result: everything seems to be working, however I've read that it inserts values directly into the SQL query string, which risks SQL injection that changes the query (sql command in the multi-line string) that might have  problematic side-effects depending on input like 5 OR 1=1
 - Added comments explaining a few lines with my own wording
 
-### Session 2 (~25mins):
+### Session 2 (~65mins):
 - Added get_text() and get_int() helpers to utils.py
 - Replaced input() and int(input()) in main.py with corresponding functions
 - Added get_timestamp() to utils.py
 - Replaced manual date input in add_note_by_input() with automatic timestamp generation
+- Added dynamic UX note listing (This was supposed to be simple, however it turned into a tedious debugging session)
+- Added choose_note_id into main.py
+- Updated the design of: view_note_details(), update_note_by_input() and delete_note_by_input to effectively feature choose_note_id
+- Updated show_notes() to not add placeholder note whenever there are no notes
