@@ -19,7 +19,7 @@ The goal of this project is to learn SQL fundamentals and replace JSON.
 - [x] Add note creation from user input
 - [x] Add update/edit note feature
 - [x] Add input validation
-- [ ] Add timestamps for notes
+- [x] Add timestamps for notes
 - [ ] Add basic pytest tests
 
 
