@@ -5,25 +5,45 @@ def show_notes():
     notes = get_notes()
 
     if len(notes) == 0:
-        add_note("Pizza note", "That pizza from yesterday had too much cheese on it", "15-07-2026")
-        notes = get_notes()
+        print("No note has been found")
+        return
 
     for idx, note in enumerate(notes, start=1):
         print(f"{idx}. {note[1]} - {note[2]}")
 
+def choose_note_id():
+    notes = get_notes()
+
+    if not notes:
+        print("Notes not found!")
+        return 
+
+    for idx, note in enumerate(notes, start=1):
+        print(f"{idx}. {note[1]} - {note[2]}")
+
+    choice = get_int("Select note number\n> ")
+
+    if choice < 1 or choice > len(notes):
+        print("Invalid note number")
+        return
+    
+    selected_note = notes[choice - 1]
+    note_id = selected_note[0]
+
+    return note_id
+
 
 def view_note_details():
-    show_notes()
-    try:
-        note_id = get_int("Choose note ID: ")
-    except ValueError:
-        print("ID not found")
+    note_id = choose_note_id()
+
+    if note_id is None:
         return
 
     note = get_notes_by_id(note_id)
 
     if note is None:
         print("Note not found")
+        return
     else:
         print(f"ID: {note[0]}")
         print(f"Title: {note[1]}")
@@ -50,12 +70,9 @@ def add_note_by_input():
 
 
 def update_note_by_input():
-    show_notes()
+    note_id = choose_note_id()
 
-    try:
-        note_id = get_int("Choose Note ID to update\n> ")
-    except ValueError:
-        print("Invalid ID")
+    if note_id is None:
         return
     
     note = get_notes_by_id(note_id)
@@ -75,16 +92,13 @@ def update_note_by_input():
     print("Note updated!")
 
 def delete_note_by_input():
-    show_notes()
+    note_id = choose_note_id()
 
-    try:
-        note_id = get_int("Choose note ID: ")
-    except ValueError:
-        print("ID not found")
+    if note_id is None:
         return
     
-    print(f"{note_id} has been successfuly deleted!")
     delete_note(note_id)
+    print(f"{note_id} has been successfuly deleted!")
 
 
 def search_notes_by_input():
