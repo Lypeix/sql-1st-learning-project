@@ -55,7 +55,8 @@
 - Replaced input() and int(input()) in main.py with corresponding functions
 - Added get_timestamp() to utils.py
 - Replaced manual date input in add_note_by_input() with automatic timestamp generation
-- Added dynamic UX note listing (This was supposed to be simple, however it turned into a tedious debugging session)
+- Added dynamic UX note listing using display numbers instead of note IDs
 - Added choose_note_id into main.py
 - Updated the design of: view_note_details(), update_note_by_input() and delete_note_by_input to effectively feature choose_note_id
-- Updated show_notes() to not add placeholder note whenever there are no notes
+- Updated show_notes() so that it no longer creates a placeholder note whenever database is empty
+- Fixed bugs caused by separating display numbers from raw IDs
