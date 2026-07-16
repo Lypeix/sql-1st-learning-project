@@ -1,3 +1,5 @@
+from datetime import datetime
+
 def get_text(prompt):
     while True:
         value = input(prompt).strip()
@@ -14,3 +16,6 @@ def get_int(prompt):
 
         except ValueError:
             print("Invalid number")
+
+def get_timestamp():
+    return datetime.now().strftime("%d-%m-%Y | %H:%M")
