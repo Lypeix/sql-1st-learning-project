@@ -101,7 +101,7 @@ def update_notes(note_id, new_title, new_content):
         UPDATE notes
         SET title = ?, content = ?
         WHERE id = ?
-        """, (note_id, new_title, new_content))
+        """, (new_title, new_content, note_id))
     
     connection.commit()
     connection.close()
