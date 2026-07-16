@@ -1,5 +1,5 @@
 from database import create_table, add_note, get_notes, get_notes_by_id, delete_note, search_notes, update_notes
-
+from utils import get_text, get_int
 
 def show_notes():
     notes = get_notes()
@@ -15,7 +15,7 @@ def show_notes():
 def view_note_details():
     show_notes()
     try:
-        note_id = int(input("Choose note ID: "))
+        note_id = get_int("Choose note ID: ")
     except ValueError:
         print("ID not found")
         return
@@ -31,19 +31,19 @@ def view_note_details():
         print(f"Created at: {note[3]}")   
 
 def add_note_by_input():
-    title = input("Title: ").strip()
+    title = get_text("Title: ").strip()
 
     if not title:
         print("Title cannot be empty")
         return
     
-    content = input("Content: ").strip()
+    content = get_text("Content: ").strip()
 
     if not content:
         print("Content cannot be empty")
         return
     
-    created_at = input("Created at: ")
+    created_at = get_text("Created at: ")
 
     if not created_at:
         print("Date cannot be empty")
@@ -57,7 +57,7 @@ def update_note_by_input():
     show_notes()
 
     try:
-        note_id = int(input("Choose Note ID to update\n> "))
+        note_id = get_int("Choose Note ID to update\n> ")
     except ValueError:
         print("Invalid ID")
         return
@@ -68,8 +68,8 @@ def update_note_by_input():
         print("No matching note found")
         return
 
-    new_title = input("New title\n> ")
-    new_content = input("New content\n> ")
+    new_title = get_text("New title\n> ")
+    new_content = get_text("New content\n> ")
 
     if not new_title or not new_content:
         print("New title and content cannot be empty")
@@ -82,7 +82,7 @@ def delete_note_by_input():
     show_notes()
 
     try:
-        note_id = int(input("Choose note ID: "))
+        note_id = get_int("Choose note ID: ")
     except ValueError:
         print("ID not found")
         return
@@ -92,7 +92,7 @@ def delete_note_by_input():
 
 
 def search_notes_by_input():
-    search_text = input("Search notes by title/content\n> ").strip()
+    search_text = get_text("Search notes by title/content\n> ").strip()
 
     if not search_text:
         print("Search cannot be empty")
@@ -113,7 +113,7 @@ def main():
     create_table()
 
     while True:
-        choice = input("What would you like to do? (Choose the number corresponding to your choice)"
+        choice = get_text("What would you like to do? (Choose the number corresponding to your choice)"
                     "\n1. View notes"
                     "\n2. View note details"
                     "\n3. Add notes"
