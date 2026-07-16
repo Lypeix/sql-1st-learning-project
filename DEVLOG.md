@@ -29,7 +29,7 @@
 - Added update_notes() to database.py
 - Added update_notes_by_input() to main.py
 
-## DAY 4 OF PROGRESS (16.07.2026):
+## DAY 4 - PROJECT CONCLUDED (16.07.2026):
 ### Session 1 (~50mins): 
 - Remade update_notes(), delete_notes(), search_notes() from memory
 - Fixed the ordering of parameters in update_notes()
@@ -60,3 +60,5 @@
 - Updated the design of: view_note_details(), update_note_by_input() and delete_note_by_input to effectively feature choose_note_id
 - Updated show_notes() so that it no longer creates a placeholder note whenever database is empty
 - Fixed bugs caused by separating display numbers from raw IDs
+
+Final note: Reconstruction of functions from Day 4 will be done on 17th of July, however the project is already finished
