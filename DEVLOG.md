@@ -32,3 +32,4 @@
 ## DAY 4 OF PROGRESS (15.07.2026):
 ### Session 1 (~15mins): 
 - Remade update_notes(), delete_notes(), search_notes() from memory
+- Fixed the ordering of parameters in update_notes()
