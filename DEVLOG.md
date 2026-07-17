@@ -65,3 +65,8 @@
 ### Session 1 (~30mins)
 - Explained get_int(), get_timestamp and choose_note_id() functions with comments
 - Remade get_int(), get_timestamp and choose_note_id() functions from memory
+- Reviewed:
+  - nested function calls
+  - datetime.now().strftime()
+  - query interactions
+  - python indexing vs database id
