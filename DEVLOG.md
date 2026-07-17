@@ -61,3 +61,7 @@
 - Updated show_notes() so that it no longer creates a placeholder note whenever database is empty
 - Fixed bugs caused by separating display numbers from raw IDs
 
+## DAY 5 - POST-PROJECT PRACTICE (17.07.2026)
+### Session 1 (~30mins)
+- Explained get_int(), get_timestamp and choose_note_id() functions with comments
+- Remade get_int(), get_timestamp and choose_note_id() functions from memory
