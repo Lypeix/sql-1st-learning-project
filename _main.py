@@ -19,16 +19,16 @@ def choose_note_id():
         return 
 
     for idx, note in enumerate(notes, start=1):
-        print(f"{idx}. {note[1]} - {note[2]}")
+        print(f"{idx}. {note[1]} - {note[2]}") # note[1] and note[2] mean title and created_at (bc of their placements inside get_notes() query)
 
     choice = get_int("Select note number\n> ")
 
-    if choice < 1 or choice > len(notes):
+    if choice < 1 or choice > len(notes): # ensures the choice is within the range of displayed numbers
         print("Invalid note number")
         return
     
-    selected_note = notes[choice - 1]
-    note_id = selected_note[0]
+    selected_note = notes[choice - 1] # python indexing starts from 0, so it's required to subtract 1 from user's choice to accurately reflect their choice (display numbers start from 1)
+    note_id = selected_note[0] # extracts the database id from the selected note tuple
 
     return note_id
 
