@@ -22,10 +22,10 @@ The goal of this project is to learn SQL fundamentals and replace JSON with SQLi
 - [x] Add timestamps for notes
 - [x] Add dynamic UX listing
 
-
-README.md      # Project documentation
-DEVLOG.md      # Additional project documentation
-main.py        # Main program loop and starter
-database.py    # SQLite connection and database queries
-utils.py       # Reusable helpers
-notes.db       # Local SQLite database file
+~~~text
+  README.md      # Project documentation
+  DEVLOG.md      # Additional project documentation
+  main.py        # Main program loop and starter
+  database.py    # SQLite connection and database queries
+  utils.py       # Reusable helpers
+  notes.db       # Local SQLite database file
