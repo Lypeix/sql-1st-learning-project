@@ -39,7 +39,7 @@ def get_notes():
     cursor = connection.cursor()
 
     cursor.execute("SELECT id, title, created_at FROM notes")
-    notes = cursor.fetchall() # grabs selected rows and returns them as python objects
+    notes = cursor.fetchall() # grabs all the rows and returns them as python objects
 
     connection.close()
 
