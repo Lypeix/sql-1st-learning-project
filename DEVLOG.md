@@ -69,4 +69,4 @@
   - nested function calls
   - datetime.now().strftime()
   - query interactions
-  - python indexing vs database id
+  - python indexing vs database ids
