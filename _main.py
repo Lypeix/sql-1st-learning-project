@@ -15,7 +15,7 @@ def choose_note_id():
     notes = get_notes()
 
     if not notes:
-        print("Notes not found!")
+        print("No note has been found!")
         return 
 
     for idx, note in enumerate(notes, start=1):
