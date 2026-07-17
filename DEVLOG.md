@@ -61,4 +61,3 @@
 - Updated show_notes() so that it no longer creates a placeholder note whenever database is empty
 - Fixed bugs caused by separating display numbers from raw IDs
 
-Final note: Reconstruction of functions from Day 4 will be done on 17th of July, however the project is already finished
